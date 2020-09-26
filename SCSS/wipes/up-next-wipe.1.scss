@@ -1,0 +1,77 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+.up-next-one {
+    position: relative;
+    opacity: 0;
+    .abs {
+        position: absolute;
+        top: 0;
+    }
+
+    .text-con {
+        display: flex;
+        flex-direction: column;
+        top: 40%;
+        padding-left: 15vh;
+        overflow: hidden;
+    }
+    h1, h2, p {
+        color: white;
+        font-family: $font-stack-century;
+        margin: 0;
+        white-space: nowrap;
+        width: min-content;
+    }
+
+    h1 {
+        font-size: 6em;
+        font-weight: 600;
+        line-height: 0.9;
+        height: 80px;
+    }
+
+    h2 {
+        font-size: 2em;
+        font-weight: 200;
+    }
+
+    p {
+        font-size: 4em;
+        font-weight: 200;
+        border-radius: 25px;
+        border: 10px solid white;
+        padding: 0 .15em;
+    }
+
+    .logo {
+        top: 8%;
+        margin: 0 3vw;
+        width: 15vw;
+    }
+
+    .square, .loading-bar-border, .slider-border  {
+        stroke: white;
+        stroke-width: 2px;
+    }
+
+    .square {
+        stroke-dasharray: 0 150;
+    }
+
+    .slider {
+        right: 3%;
+        top: 42%;
+    }
+
+    .loading-bar {
+        right: 3%;
+        top: 96%;
+    }
+
+    .border, .background-color-rect {
+        z-index: 5
+    }
+}

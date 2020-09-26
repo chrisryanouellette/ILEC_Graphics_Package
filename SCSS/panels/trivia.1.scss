@@ -1,0 +1,131 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+main {
+    overflow-x: visible;
+}
+
+.trivia-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $font-stack-century;
+    width: 600px;
+    padding: 0 .5em;
+    opacity: 0;
+
+    .header {
+        background: linear-gradient(to left, #e66465, #9198e5);
+        border-radius: 25px 25px 0 0;
+        margin: 0 auto;
+        margin-bottom: -2px;
+        width: 450px;
+        z-index: -10;
+    }
+
+    h1 {
+        align-content: center;
+        font-size: 2em;
+        margin: .25em auto;
+        text-align: center;
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
+    }
+
+    .parent {
+        margin: 0 auto;
+        display: block;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .alpha-lines line {
+        stroke: black;
+        stroke-width: 20px;
+        stroke-linecap: round;
+    }
+
+    svg use {
+        stroke: black;
+    }
+
+    svg line {
+        stroke-width: 20px;
+        stroke-linecap: round;
+    }
+
+    svg circle {
+        stroke: none;
+    } 
+
+    svg {
+        overflow: visible;
+    }
+
+    .content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        grid-column: 1;
+        grid-row: 1/2 span;
+        max-width: 55%;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        height: min-content;
+
+        p {
+            font-size: 2em;
+            margin: .25em 0;
+        }
+        
+        ul {
+            font-size: 1.5em;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 .5em 0;
+        }
+    }
+
+    .looping-lines-one {
+        animation: loopinglines 10s ease-in-out 0s infinite normal both;
+    }
+
+    .looping-lines-two {
+        animation: loopinglines 15s ease-in-out 1s infinite normal both;
+    }
+
+    @keyframes loopinglines {
+        0% {transform: translateX(10px);}
+        50% {transform: translateX(-10px);}
+        100% {transform: translateX(10px);}
+    }
+
+    @keyframes strike{
+        0%   { width : 0; }
+        100% { width: 100%; }
+      }
+      .strike {
+        position: relative;
+      }
+      .strike::after {
+        content: ' ';
+        position: absolute;
+        top: 48%;
+        left: 0;
+        width: 100%;
+        height: 1.5px;
+        background: black;
+        animation-name: strike;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; 
+      }
+}

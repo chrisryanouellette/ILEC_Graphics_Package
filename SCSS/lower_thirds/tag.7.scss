@@ -1,0 +1,62 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+
+.tag-seven {
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+
+
+    .container {
+        display: grid;
+        margin: 4vw 6vw;
+        grid-row-gap: 2px;
+
+        .title, .subtitle {
+            position: relative;
+        }
+
+        .title {
+            overflow: hidden;
+        }
+
+        .subtitle {
+            padding-left: 4px;
+        }
+
+        h1, p, text {
+            font-family: $font-stack-century;
+            margin: 0;
+        }
+
+        p, text {
+            font-size: 2em;
+            white-space: nowrap;
+        }
+
+        h1 {
+            font-size: 4em;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        p {
+            top: 0;
+            padding: 0 1em;
+            position: absolute;
+        }
+
+        svg {
+            height: 2.5em;
+
+            .subtitle-bkg {
+                fill: black;
+            }
+        }
+    }
+}

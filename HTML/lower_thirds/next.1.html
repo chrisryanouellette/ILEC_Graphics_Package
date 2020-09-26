@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://localhost:8082/CSS/lower_thirds/next.1.css">
+    </head>
+    <body>
+        <main class="next-one">
+            <div class="container">
+                <div class="header">
+                    <svg width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <mask id="main-mask">
+                                <rect id="bkg" x="0" y="0" width="100%" height="100%" fill="white" />
+                                <rect class="square" x="0" y="-5" width="50" height="110%" fill="black"/>
+                                <rect class="square" x="0" y="-5" width="50" height="110%" fill="black"/>
+                                <text text-anchor="middle" x="50%" y="60" fill="black">NEXT</text>
+                            </mask>
+                            
+                        </defs>
+                        <rect class="header-bkg" mask="url(#main-mask)" x="0" y="0" height="100%" width="100%"/>
+                    </svg>
+                </div>
+                <div class="title">
+                    <h1>Favorite</h1>
+                    <p class="hidden">Favorite</p>
+                </div>
+                <div class="subtitle">
+                    <h2>Stories</h2>
+                </div>
+                <div class="info">
+                    <p>12th Series</p>
+                </div>
+            </div>
+        </main>
+        <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="http://localhost:8082/socket.io/socket.io.js" async defer></script>
+        <script src="http://localhost:8082/JS/helpers/helpers.js" async defer></script>
+        <script src="http://localhost:8082/JS/helpers/controls.js" async defer></script>
+        <script src="http://localhost:8082/JS/lower_thirds/next.1.js" async defer></script>
+    </body>
+</html>

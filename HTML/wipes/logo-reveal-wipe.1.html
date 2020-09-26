@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Logo Reveal 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://127.0.0.1:8082/CSS/wipes/logo-reveal-wipe.1.css">
+    </head>
+    <body>
+        <main class="logo-reveal-one">
+            <svg class="abs" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <pattern id="background-pattern" x="0" y="0" width="1%" height="1%" patternUnits="userSpaceOnUse">
+                        <circle cx=".5%" cy=".5%" r=".25%" fill="black" fill-opacity=".25"/>
+                    </pattern>
+                    <filter id="displacement-filter">
+                        <feTurbulence baseFrequency="0.05"
+                            numOctaves="1" type="fractalNoise" result="turbulence"/>
+                        <feDisplacementMap in2="turbulence" in="SourceGraphic"
+                            scale="250" xChannelSelector="R" yChannelSelector="G"/>
+                    </filter>
+                    <mask id="dots-mask">
+                        <rect x="0" y="0" width="100%" height="100%" fill="black"/>
+                        <circle cx="50%" cy="100%" r="400" filter="url(#displacement-filter)" fill="white" transform="scale(1, .5)"/>
+                    </mask>
+                    <radialGradient id="RadialGradient">
+                        <stop offset="0%" stop-color="#C2C2C2"/>
+                        <stop offset="100%" stop-color="white"/>
+                    </radialGradient>
+                    <mask id="background-mask">
+                        <rect x="0" y="0" width="100%" height="100%" fill="url(#RadialGradient)" />
+                    </mask>
+                    <path id="angled-line" d="M0, 0 l50, 50" stroke="black"strok-width="5px"/>
+                </defs>
+                <rect class="logo-accent" x="0" y="0" height="100%" width="100%" fill="blue"/>
+                <g class="background">
+                    <image class="background-image" x="0" y="0" width="100%" height="100%" xlink:href="" />
+                    <rect class="background-dots" x="0" y="0" height="100%" width="100%" mask="url(#dots-mask)" fill="url(#background-pattern)" />
+                    <rect class="background-rect" mask="url(#background-mask)"  x="0" y="0" height="100%" width="100%" fill="white"/>
+                </g>
+                <g class="lines">
+                    <use class="line" href="#angled-line" x="20%" y="20%"/>
+                    <use class="line" href="#angled-line" x="60%" y="30%"/>
+                    <use class="line" href="#angled-line" x="30%" y="80%"/>
+                    <use class="line" href="#angled-line" x="50%" y="60%"/>
+                    <use class="line" href="#angled-line" x="80%" y="80%"/>
+                </g>
+               
+            </svg>
+            <div class="logo-con">
+                <img class="logo"/>
+                <p>Subtitle</p>
+            </div>
+        </main>
+        <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="http://127.0.0.1:8082/socket.io/socket.io.js" async defer></script>
+        <script src='http://127.0.0.1:8082/JS/helpers/helpers.js' async defer></script>
+        <script src="http://localhost:8082/JS/helpers/controls.js" async defer></script>
+        <script src="http://localhost:8082/JS/wipes/logo-reveal-wipe.1.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+//  Varaibles
+
+$font-title: 2vw;
+$font-subtitle: 1.5vw;
+$font-body: 1vw;
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700&display=swap');
+
+$font-stack-century: 'CenturyGothic', Helvetica;
+$main-font: Helvetica;
+$font-stack-apple: 'HomemadeApple', Serif;
+$font-stack-josefin :'Josefin Sans', sans-serif;
+
+
+
+@font-face {
+    font-family: 'CenturyGothic';
+    //src: url('../../FONTS/CenturyGothic.ttf');
+    //src: url("http://localhost:8080/fonts/CenturyGothic.ttf");
+    src: url("http://127.0.0.1:8081/FONTS/CenturyGothic.ttf");
+}
+
+
+@font-face {
+    font-family: 'HomemadeApple';
+    //src: url('../../FONTS/HomemadeApple.woff');
+    src: url("http://127.0.0.1:8081/FONTS/HomemadeApple.woff");
+}

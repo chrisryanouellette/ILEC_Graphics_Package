@@ -1,0 +1,9 @@
+# Ignore folders
+VIDEO
+IMAGE
+DEV
+CSS
+JS/GSAP
+
+# Ignore Maps
+*.map

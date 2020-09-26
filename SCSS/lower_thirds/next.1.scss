@@ -1,0 +1,68 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+.next-one {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: right;
+    opacity: 0;
+
+    .container {
+        margin: 4vw 6vw;
+
+        display: grid;
+        grid-template-rows: 1fr min-content min-content min-content;
+
+        h1, h2, p, svg text {
+            font-family: $font-stack-century;
+            margin: 0;
+        }
+
+        h1, h2, text, .hidden {
+            font-weight: 700;
+        }
+
+        text {
+            font-style: italic;
+        }
+
+        div {
+            overflow: hidden;
+        }
+
+        .header {
+
+            svg {
+                height: 4.5em;
+            }
+            p {
+                position: absolute;
+            }
+        }
+
+        .title h1, svg text, .hidden {
+            font-size: 4em;
+            line-height: 52px;
+            width: min-content;
+            white-space: nowrap;
+        }
+
+        .subtitle h2 {
+            font-size: 2.5em;
+            line-height: 30px;
+        }
+
+        .info p {
+            font-size: 1.5em;
+        }
+
+        .hidden {
+            position: absolute;
+
+        }
+
+    }
+}

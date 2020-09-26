@@ -1,0 +1,69 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+.up-next-wipe-three {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-family: $main-font;
+    opacity: 0;
+
+    position: relative;
+    .abs {
+        top: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .logo {
+        top: 6vh;
+        left: 2vw;
+        width: 15vw;
+    }
+
+    .con {
+        color: white;
+        margin: 0 auto;
+        
+        .content {
+            display: flex;
+        }
+        .item {
+            width: 25vw;
+            margin-right: 1.5em;   
+        }
+
+        .title-con {
+            margin-bottom: 5vh; 
+            overflow: hidden;
+        }
+        .video-con {
+            border-bottom: 5px solid aqua;
+            padding-bottom: .5em;
+            margin-bottom: 2em;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin: 0;
+        }
+        video {
+            width: 25vw;
+            height: 25vh;
+        }
+        h2 {
+            font-size: 4em;
+            margin: 0;
+
+        }
+        p {
+            font-size: 3em;
+            font-weight: 100;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Instagram Image Left Panel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://localhost:8082/CSS/panels/instagram.1.css">
+    </head>
+    <body>
+        <main class="instagram-one">
+            <div class="container">
+                <div class="bkg"></div>
+                <div class="overflow">
+                    <img src="http://localhost:8082/IMAGE/portraits/headshot.1.jpg" />
+                </div>
+                <div class="overflow">    
+                    <img src="http://localhost:8082/IMAGE/portraits/headshot.2.jpg" />
+                </div>
+                <div class="overflow">
+                    <img src="http://localhost:8082/IMAGE/portraits/headshot.3.jpg" />
+                </div>
+                <div class="overflow">
+                    <img src="http://localhost:8082/IMAGE/portraits/headshot.4.jpg" />
+                </div>
+                <div class="handle">
+                    <svg class="instagram" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 300 300">
+                        <defs>
+                            <radialGradient id="top-grad" cx="50%" cy="50%" r="50%">
+                                <stop offset="10%" style="stop-color:#FFECB0; stop-opacity:1;" />
+                                <stop offset="40%" style="stop-color:#FE692D; stop-opacity:1;" />
+                                <stop offset="70%" style="stop-color:#FB1B51; stop-opacity:.9;" />
+                                <stop offset="100%" style="stop-color:#FB1B51; stop-opacity:0;" />
+                            </radialGradient>
+                            <radialGradient id="middle-grad" cx="50%" cy="50%" r="70%">
+                                <stop offset="25%" style="stop-color:#3F55E9; stop-opacity:1;" />
+                                <stop offset="50%" style="stop-color:#C82098; stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:#C82098; stop-opacity:0;" />
+                            </radialGradient>
+                            <pattern id="grad" x="0" y="0" width="300" height="300" patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="300" height="300" style="fill:#C82098"/>
+                                <circle cx="100" cy="-50" r="300" fill="url('#middle-grad')" clip-path="url('#overflow')" />
+                                <circle cx="75" cy="330" r="300" fill="url('#top-grad')" clip-path="url('#overflow')" />
+                            </pattern>
+                            <clipPath id="overflow">
+                                <rect x="0" y="0" width="300" height="300"/>
+                            </clipPath>
+                        </defs>
+                        <title>Instagram Logo</title>
+                        <rect class="camera" x="25" y="25" width="250" height="250" rx="75" ry="75" fill="none" stroke="url('#grad')" stroke-width="1.5vw"/>
+                        <circle class="dot" cx="215" cy="75" r="20" fill="url('#grad')" />
+                        <circle class="lens" cx="150" cy="150" r="50" fill="none" stroke="url('#grad')" stroke-width="1.5vw"/>
+                    </svg>
+                    <div>
+                        <p class="username">JakeySorous</p>
+                    </div>
+                    <svg class="heart" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M711.916 449.009L400 760.925L88.0844 449.009C46.7219 407.647 23.4846 351.547 23.4846 293.052C23.4846 234.556 46.7219 178.456 88.0844 137.094C129.447 95.7312 185.547 72.494 244.042 72.494C302.538 72.494 358.637 95.7312 400 137.094C441.363 95.7312 497.462 72.4939 555.958 72.4939C614.453 72.4939 670.553 95.7312 711.916 137.094C753.278 178.456 776.515 234.556 776.515 293.052C776.515 351.547 753.278 407.647 711.916 449.009V449.009Z" />
+                    </svg>   
+                </div>
+                <div class="lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </main>
+        <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="http://127.0.0.1:8082/socket.io/socket.io.js"></script>
+        <script src="http://localhost:8082/JS/helpers/helpers.js" async defer></script>
+        <script src="http://localhost:8082/JS/helpers/controls.js" async defer></script>
+        <script src="http://localhost:8082/JS/panels/instagram.1.js" async defer></script>
+    </body>
+</html>

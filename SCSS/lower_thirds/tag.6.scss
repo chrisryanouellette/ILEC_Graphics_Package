@@ -1,0 +1,66 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    opacity: 0;
+
+    h1 {
+        height: 50px;
+        line-height: 55px;
+        font-size: 4em;
+        margin: 0;
+        white-space: nowrap;
+        
+    }
+
+    p {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    h1, p {
+        
+        font-family: $font-stack-century;
+        margin-right: 10px;
+        padding: .25em 50px;
+        transform: translateZ(50px);
+        text-shadow: #000 0px 0px 15px;
+        backface-visibility: hidden;
+    }
+}
+
+.scene {
+    justify-content: left;
+    display: flex;
+    perspective: 3000px;
+    margin: 4vw 6vw;
+
+    .cube {
+        position: relative;
+        transform-style: preserve-3d;
+        transform-origin: left center;
+        width: min-content;
+    }
+
+    .cube__face {
+        transform-style: preserve-3d;
+        position: relative;
+        // background: linear-gradient(rgb(118, 175, 231), #456), black;
+        // background-size: 99% 10px;
+
+        background:
+            linear-gradient(to left, white 5px, rgba(0,0,0,0) 5px),
+            linear-gradient(0, rgb(118, 175, 231), rgb(118, 175, 0));
+
+
+        margin: .5em 0;
+        width: max-content;
+    }
+
+ }

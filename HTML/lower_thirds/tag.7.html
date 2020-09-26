@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Tag Seven</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://localhost:8082/CSS/lower_thirds/tag.7.css">
+    </head>
+    <body>
+        <main class="tag-seven">
+            <div class="container">
+                <div class="title">
+                    <h1>Title</h1>
+                </div>
+                <div class="subtitle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200px">
+                        <defs>
+                            <mask id="subtitle-mask">
+                                <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                                <text text-anchor="middle" x="50%" y="75%" fill="black">Subtitle</text>
+                            </mask>
+                        </defs>
+                        <rect class="subtitle-bkg" mask="url(#subtitle-mask)" x="0" y="0" width="100%" height="100%" y="100%"/>
+                    </svg>
+                    <p class="hidden">Subtitle</p>
+                </div>
+            </div>
+        </main>
+        <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="http://localhost:8082/socket.io/socket.io.js" async defer></script>
+        <script src="http://localhost:8082/JS/helpers/helpers.js" async defer></script>
+        <script src="http://localhost:8082/JS/helpers/controls.js" async defer></script>
+        <script src="http://localhost:8082/JS/lower_thirds/tag.7.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+.logo-reveal-one {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $main-font;
+    opacity: 0;
+
+
+    .abs {
+        position: absolute;
+        top: 0%;
+        z-index: -1;
+    }
+
+    .line {
+        stroke-dasharray: 80 100;
+        stroke-dashoffset: 0;
+    }
+
+    .logo-con {
+        text-align: center;
+    }
+
+    img {
+        width: 50vw;
+    }
+
+    p {
+        font-size: 3em;
+        margin: 0;
+    }
+
+}

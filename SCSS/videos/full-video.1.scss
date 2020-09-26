@@ -1,0 +1,16 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+.full-video-one {
+    position: relative;
+
+    video {
+        position: absolute;
+        opacity: 0;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+    }
+}

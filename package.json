@@ -1,0 +1,20 @@
+{
+  "name": "ilec_graphics_package",
+  "version": "0.0.1",
+  "description": "A graphics package containing all the ILEC graphics.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -c-1 -p8082 -d1",
+    "SCSS": "sass --watch SCSS:CSS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisryanouellette/ILEC_Graphics_Package"
+  },
+  "keywords": [
+    "ILEC",
+    "graphics"
+  ],
+  "author": "Christopher Ouellette",
+  "license": "ISC"
+}

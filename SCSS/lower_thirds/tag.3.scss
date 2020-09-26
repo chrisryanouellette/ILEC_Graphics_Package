@@ -1,0 +1,82 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+.tag-three {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    opacity: 0;
+
+    .container {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6vh 6vh;
+        max-width: 50vw;
+        text-align: center;
+        margin: 4vw 6vw;
+        width: min-content;
+        height: min-content;
+        overflow: hidden;
+    }
+
+    svg {
+        width: 100%;
+        fill: none ;
+        stroke-width: .5vw;
+        z-index: 10;
+        
+        polyline {
+            stroke-dasharray: 600;
+            stroke-dashoffset: 600;
+        }
+
+        .color {
+            stroke: #00C657;
+        }
+
+        .white {
+            stroke: white;
+        }
+        
+    }
+
+    svg, .name-con {
+        grid-column: 1;
+        grid-row: 2;
+        height: 6vh;
+    }
+
+    .name-con {
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: 300;
+        height: 3vh;
+        white-space: nowrap;
+        padding: 0 1em;
+    }
+
+    p {
+        grid-column: 1;
+        grid-row: 1/2 span;
+        height: .5em;
+        width: min-content;
+        white-space: nowrap;
+        justify-self: center;
+    }
+
+    h1, p {
+        font-family: $font-stack-josefin;
+        text-align: center;
+        margin: 0;
+    }
+    span {
+        font-weight: 600
+    }
+}

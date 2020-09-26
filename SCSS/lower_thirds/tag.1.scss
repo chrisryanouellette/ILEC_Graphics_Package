@@ -1,0 +1,65 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+.tag-one {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    opacity: 0;
+    .container {
+        display: grid;
+        grid-auto-columns: min-content;
+        grid-template-rows: 1fr auto;
+        grid-gap: .25em;
+        margin: 4vw 6vw;
+        overflow: hidden;
+    }
+    svg, .accent-square, .sizing {
+        grid-column: 1; grid-row: 1;
+        width: 100%;
+        height: 5vh;
+    }
+    .name, .title {
+        font-family:$font-stack-josefin;
+    }
+    .name, .sizing p {
+        font-size: 2vw;
+    }
+    .sizing {
+        position: absolute;
+        opacity: 0;
+        width: min-content;
+    }
+    .sizing p {
+        grid-column: 1; grid-row: 1;
+        white-space: nowrap;
+        margin: 0 1em;
+    }
+    tspan {
+        font-weight: 600;
+    }
+    .title {
+        font-size: 1vw;
+        grid-column: 1; grid-row: 2;
+        text-align: right;
+        margin: .25em .5em;
+        z-index: -1;
+    }
+    .right-square {
+        grid-column: 2;
+        grid-row: 1/2 span;
+        height: 100%;
+        width: .25vw;
+        z-index: 10;
+    }
+
+    .main-square, .right-square {
+        background-color: #00C657;
+        fill: #00C657;
+    }
+    .accent-square {
+        fill: white;
+    }
+}

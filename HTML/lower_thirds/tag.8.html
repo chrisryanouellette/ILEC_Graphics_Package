@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Tag Eight</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://localhost:8082/CSS/lower_thirds/tag.8.css">
+    </head>
+    <body>
+        <main class="tag-eight">
+            <div class="container">
+                <svg viewbox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <mask id="large-clip">
+                            <circle class="large-circle" cx="50%" cy="50%" r="100" fill="white" transform-origin="center center" />
+                            <circle class="large-alpha" cx="50%" cy="50%" r="100" fill="black" transform-origin="center center" />
+                        </mask>
+                        <mask id="small-clip">
+                                <circle class="small-circle" cx="75%" cy="75%" r="45" fill="white" transform-origin="center center" />
+                                <circle class="small-alpha" cx="75%" cy="75%" r="45" fill="black" transform-origin="center center" />
+                        </mask>
+                        <filter id="lighting-filter" x="0" y="0" width="100%" height="100%">
+                            <!--Blur effect-->
+                            <feGaussianBlur stdDeviation="10" result="blur3" />
+                            <!--Lighting effect-->
+                            <feSpecularLighting result="spec3" in="blur3" specularConstant=".25" specularExponent="7" lighting-color="#FFF">
+                                <!--Light source effect-->
+                                <feSpotLight x="-200" y="-200" z="200" pointsAtX="200" pointsAtY="200" limitingConeAngle="13" />
+                            </feSpecularLighting>
+                            <!--Composition of inputs-->
+                            <feComposite in="SourceGraphic" in2="spec3" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+                        </filter>
+                        <filter id="shadow">
+                            <feDropShadow dx="0.2" dy="0.4" stdDeviation="4"/>
+                        </filter>
+                    </defs>
+                    <g filter="url(#shadow)">
+                        <circle filter="url(#lighting-filter)" mask="url(#large-clip)" class="large-circle" cx="50%" cy="50%" r="100" transform-origin="center center" />
+                        <circle filter="url(#lighting-filter)" mask="url(#small-clip)" class="small-circle" cx="75%" cy="75%" r="45" fill="black" transform-origin="center center" />
+                    <g>
+                </svg>
+                <div>
+                    <h1>New Title</h1>
+                </div>
+                <div>
+                    <p>Subtitle</p>
+                </div>
+            </div>
+        </main>
+        <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="http://localhost:8082/socket.io/socket.io.js" async defer></script>
+        <script src="http://localhost:8082/JS/helpers/helpers.js" async defer></script>
+        <script src="http://localhost:8082/JS/helpers/controls.js" async defer></script>
+        <script src="http://localhost:8082/JS/lower_thirds/tag.8.js" async defer></script>
+    </body>
+</html>

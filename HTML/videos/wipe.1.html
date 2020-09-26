@@ -1,0 +1,26 @@
+<div class="wipe-1">
+    <div class="animate">
+        <canvas id="wipe-1-right-canvas"></canvas>
+        <canvas id="wipe-1-center-canvas"></canvas>
+        <canvas id="wipe-1-left-canvas"></canvas>
+        <canvas id="wipe-1-end-canvas" class="abs"></canvas>
+        <svg class="abs" width="100%" height="100%" >
+            <defs>
+                <clipPath id="wipe-1-first-clip">
+                    <rect x="0" y="0" width="34%" height="100%" fill="black"/>
+                </clipPath>
+                <clipPath id="wipe-1-second-clip">
+                    <rect x="33%" y="0" width="34%" height="100%" fill="black"/>
+                </clipPath>
+                <clipPath id="wipe-1-third-clip">
+                    <rect x="66%" y="0" width="34%" height="100%" fill="black"/>
+                </clipPath>
+                <clipPath id="wipe-1-fourth-clip">
+                    <path class="in" d="M0,0 h200 q100 540,0 1080 h-200 q100 -540,0 -1080 Z" fill="black"/>
+                    <path class="out" d="M-200, 0 q200 540,0 1080 h2120 v-1080 Z" fill="black"/>
+                </clipPath>
+            </defs>
+            <path class="stripe" d="M0,0 h200 q100 540,0 1080 h-200 q100 -540,0 -1080 Z" fill="blue"/>
+        </svg>
+    </div>
+</div>

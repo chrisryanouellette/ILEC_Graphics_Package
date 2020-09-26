@@ -1,0 +1,39 @@
+.wipe-2 {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    opacity: 0;
+    .abs {
+        position: absolute;
+        top: 0;
+    }
+
+    canvas {
+        position: absolute;
+        top: 0;
+        height: 1080px;
+        width: 1920px;
+
+        &#wipe-2-left-canvas {
+            clip-path: url(#wipe-2-first-clip);
+        }
+
+        &#wipe-2-center-canvas {
+            clip-path: url(#wipe-2-second-clip);
+        }
+
+        &#wipe-2-right-canvas {
+            clip-path: url(#wipe-2-third-clip);
+        }
+    }
+
+    .animate {
+        position: relative;
+        height: 100%;
+        width: 100%; 
+        overflow: hidden;
+    }
+}
+

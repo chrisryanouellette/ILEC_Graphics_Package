@@ -1,0 +1,47 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+@include root;
+
+
+.title-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    opacity: 0;
+
+    .container {
+        position: relative;
+        overflow: hidden;
+
+        svg {
+            height: 95px;
+            .split-text {
+                fill: black;
+            }
+        }
+        
+        h1, p, text {
+            font-family: $font-stack-century;
+            font-weight: 600;
+            font-size: 5em;
+        }
+
+        h1 { 
+            margin: 0;
+            padding: 0 1em;
+            position: absolute;
+            top: 0;
+            white-space: nowrap;
+        }
+
+        p {
+            font-size: 2.5em;
+            margin: 0;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+        }
+    }
+}

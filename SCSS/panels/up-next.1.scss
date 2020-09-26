@@ -1,0 +1,73 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+@include root;
+
+.up-next-panel-one {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    font-family: $main-font;
+    justify-content: center;
+
+    white-space: nowrap;
+    opacity: 0;
+
+    .header {
+        background-color: grey;
+        padding: .75vh 9em;
+        overflow: hidden;
+        
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            font-style: initial;
+            text-align: center;
+        }
+    }
+
+    .con {
+        display: grid;
+        grid-template-rows: min-content;
+        grid-row-gap: 1vh;
+    }
+    .panel {
+        background-color: purple;
+        overflow: hidden;
+
+        .info {
+            background-color: black;
+            text-align: center;
+            padding: 2em 5em;
+            margin: .75em 1em .75em 0;
+            position: relative;
+
+            h2, p {
+                margin: 0;
+                text-shadow: 5px 5px 10px rgba(0,0,0,.5);
+            }
+
+            h2 {
+                font-size: 4em;
+                font-weight: 700;
+                font-style: italic;
+            }
+
+            p {
+                font-size: 2.5em;
+            }
+
+            div {
+                overflow: hidden;
+            }
+        }
+    }
+
+    .abs {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
